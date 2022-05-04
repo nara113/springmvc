@@ -60,7 +60,7 @@ public class BasicItemController {
     public String addPost(Item item) {
         itemRepository.save(item);
 
-        return "basic/item";
+        return "redirect:/basic/items/" + item.getId();
     }
 
     @GetMapping("/{itemId}/edit")
